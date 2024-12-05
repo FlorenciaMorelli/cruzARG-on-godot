@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://chwowllv2b8uw"]
+
+[ext_resource type="PackedScene" uid="uid://cydnkylxht4kn" path="res://player/scenes/messi.tscn" id="1_wu3pu"]
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="Messi" parent="." instance=ExtResource("1_wu3pu")]
+position = Vector2(559, 569)
+scale = Vector2(0.1, 0.1)

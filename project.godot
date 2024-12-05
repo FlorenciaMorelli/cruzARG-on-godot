@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="cruzARG"
+run/main_scene="res://levels/scenes/main_level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -18,3 +19,4 @@ config/icon="res://icon.svg"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.103743, 0.103744, 0.103744, 1)
