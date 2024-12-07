@@ -8,6 +8,7 @@ radius = 158.0
 height = 988.0
 
 [node name="Messi" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_0pul2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
