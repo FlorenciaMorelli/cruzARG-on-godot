@@ -1,7 +1,11 @@
 extends CharacterBody2D
 
-# speed in pixels/sec
-var speed = 300 
+# Speed in pixels/sec
+var speed = 300
+
+#	Get screen size
+@onready var screen_size = get_viewport_rect().size
+
 
 func _physics_process(delta):
 	#	Get direction of movement
@@ -21,3 +25,4 @@ func _physics_process(delta):
 	#	Setup the movement
 	velocity = (direction * speed)
 	move_and_slide()
+	position = position.clamp(Vector2.ZERO, screen_size)
