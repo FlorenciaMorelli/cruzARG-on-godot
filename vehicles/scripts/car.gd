@@ -34,7 +34,6 @@ func _on_screen_exited() -> void:
 
 
 func _on_body_entered(body: Node) -> void:
-	print("Colisión con: ", body.name)
 	if body is CharacterBody2D:
-		print("RIP escena")
+		get_tree().reload_current_scene()
 		#get_tree().change_scene("pantalla de game over")
