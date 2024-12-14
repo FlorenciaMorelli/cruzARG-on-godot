@@ -8,6 +8,8 @@ size = Vector2(74, 16)
 
 [node name="Car" type="RigidBody2D"]
 collision_layer = 2
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_ec4u6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

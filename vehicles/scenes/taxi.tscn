@@ -8,6 +8,8 @@ size = Vector2(64, 24)
 
 [node name="Taxi" type="RigidBody2D"]
 collision_layer = 2
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_dmdk5")
 
 [node name="Taxi_CollisionShape2D" type="CollisionShape2D" parent="."]
