@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 #	Speed in pixels/sec
-@export var speed = 300
+@export var speed = 200
 #	Direction of movement
 @export var direction: int = 1 # 1 goes right, -1 goes left
 #	Sprite Node for changing visual direction
