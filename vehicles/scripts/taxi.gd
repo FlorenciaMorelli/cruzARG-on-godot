@@ -1,11 +1,11 @@
 extends RigidBody2D
 
 #	Speed in pixels/sec
-@export var speed = 200
+@export var speed = 300
 #	Direction of movement
 @export var direction: int = 1 # 1 goes right, -1 goes left
 #	Sprite Node for changing visual direction
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: Sprite2D = $Taxi_Sprite2D
 
 
 # Called when the node enters the scene tree for the first time.
