@@ -16,3 +16,7 @@ scale = Vector2(0.03, 0.03)
 
 [node name="Car" parent="." instance=ExtResource("3_64rjl")]
 position = Vector2(71, 589)
+
+[node name="Car2" parent="." instance=ExtResource("3_64rjl")]
+position = Vector2(1113, 47)
+direction = -1
