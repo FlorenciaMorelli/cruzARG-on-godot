@@ -10,6 +10,7 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("vehicles")
 	_update_sprite_direction()
 
 
@@ -30,3 +31,10 @@ func _on_screen_exited() -> void:
 		global_position.x = get_parent().global_position.x
 	elif direction == -1:
 		global_position.x = get_viewport_rect().size.x
+
+
+func _on_body_entered(body: Node) -> void:
+	print("Colisión con: ", body.name)
+	if body is CharacterBody2D:
+		print("RIP escena")
+		#get_tree().change_scene("pantalla de game over")
