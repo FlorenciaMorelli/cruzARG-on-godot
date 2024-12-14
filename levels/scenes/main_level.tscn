@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://chwowllv2b8uw"]
+[gd_scene load_steps=4 format=4 uid="uid://chwowllv2b8uw"]
 
 [ext_resource type="PackedScene" uid="uid://cydnkylxht4kn" path="res://player/scenes/messi.tscn" id="1_wu3pu"]
 [ext_resource type="TileSet" uid="uid://wuxjbn5o54o8" path="res://maps/9dejulio/9dejulio.tres" id="2_rxutt"]
+[ext_resource type="PackedScene" uid="uid://cael3dc4hl50w" path="res://vehicles/car.tscn" id="3_64rjl"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -12,3 +13,6 @@ tile_set = ExtResource("2_rxutt")
 [node name="Messi" parent="." instance=ExtResource("1_wu3pu")]
 position = Vector2(575, 630)
 scale = Vector2(0.03, 0.03)
+
+[node name="Car" parent="." instance=ExtResource("3_64rjl")]
+position = Vector2(71, 589)
