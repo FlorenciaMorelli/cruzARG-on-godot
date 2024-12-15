@@ -39,5 +39,4 @@ func _on_screen_exited() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
-		get_tree().reload_current_scene()
-		#get_tree().change_scene("pantalla de game over")
+		get_tree().change_scene_to_file("res://UI/scenes/game_over.tscn")
