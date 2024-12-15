@@ -53,7 +53,7 @@ func _ready() -> void:
 	# Obtener nodos de paradas del grupo 'bus_stops'
 	bus_stops = get_tree().get_nodes_in_group("bus_stops")
 	stop_timer.start()  # Asegúrate de que se inicie en el momento correcto
-
+	resume_timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
