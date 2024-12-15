@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dcyomaq5nnq6w" path="res://player/assets/messi.png" id="1_5oyfj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfjnh"]
-radius = 158.0
-height = 988.0
+radius = 169.0
+height = 1170.0
 
 [node name="Messi" type="CharacterBody2D"]
 collision_mask = 7

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://pick-ups/scripts/football.gd" id="1_j1fi3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sspv8"]
-radius = 14.0357
+radius = 4.0
 
 [sub_resource type="Environment" id="Environment_52qan"]
 background_mode = 3
@@ -20,8 +20,10 @@ shape = SubResource("CircleShape2D_sspv8")
 
 [node name="Football_Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1.5, 1.5, 1.5, 1)
-scale = Vector2(0.08, 0.08)
+scale = Vector2(0.02, 0.02)
 texture = ExtResource("1_2x7su")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_52qan")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
