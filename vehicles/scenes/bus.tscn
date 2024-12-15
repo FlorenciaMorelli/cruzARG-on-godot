@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://da6wkhr4rlo6j"]
+
+[ext_resource type="Script" path="res://vehicles/scripts/bus.gd" id="1_0sdm7"]
+[ext_resource type="Texture2D" uid="uid://dltwol6v0m7aa" path="res://vehicles/sprites/bus1-right.png" id="1_774yv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2c1m"]
+size = Vector2(128, 34)
+
+[node name="Bus" type="RigidBody2D"]
+script = ExtResource("1_0sdm7")
+
+[node name="Bus_CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_j2c1m")
+
+[node name="Bus_Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_774yv")
+
+[node name="Bus_VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-1.90735e-06, -0.5)
+scale = Vector2(6.5, 2.05)
+
+[node name="StopTimer" type="Timer" parent="."]
+
+[node name="ResumeTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="Bus_VisibleOnScreenEnabler2D" to="." method="_on_screen_exited"]
+[connection signal="timeout" from="StopTimer" to="." method="_on_StopTimer_timeout"]
+[connection signal="timeout" from="ResumeTimer" to="." method="_on_ResumeTimer_timeout"]

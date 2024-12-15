@@ -12,6 +12,10 @@ extends RigidBody2D
 func _ready() -> void:
 	add_to_group("vehicles")
 	_update_sprite_direction()
+	set_collision_layer(2)  #	Scene is on layer 2
+	set_collision_mask(1)  # Scene detects collisions with layer 1 (Player)
+	contact_monitor = true
+	max_contacts_reported = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
