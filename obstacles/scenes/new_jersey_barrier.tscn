@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://qtixt682swxj"]
+
+[ext_resource type="Texture2D" uid="uid://r8nxyo8fg3cg" path="res://obstacles/sprites/jersey-barrier.png" id="1_0ky52"]
+[ext_resource type="Script" path="res://obstacles/scripts/new_jersey_barrier.gd" id="1_bne5s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0c5i"]
+size = Vector2(56, 10)
+
+[node name="NewJerseyBarrier" type="StaticBody2D"]
+disable_mode = 1
+collision_layer = 2
+script = ExtResource("1_bne5s")
+
+[node name="NewJerseyBarrier_CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_q0c5i")
+
+[node name="NewJerseyBarrier_Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ky52")
