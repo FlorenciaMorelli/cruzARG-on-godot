@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 func get_random_position() -> Vector2:
 	#	Define ranges
 	var min_y = 0  #	Top viewport limit
-	var max_y = viewport_size.y / 13  #	Bottom limit for the ball to appear
+	var max_y = viewport_size.y / 12  #	Bottom limit for the ball to appear
 	var random_x = randf_range(0, viewport_size.x)  #	Viewports full width
 	var random_y = randf_range(min_y, max_y)
 	return Vector2(random_x, random_y)
