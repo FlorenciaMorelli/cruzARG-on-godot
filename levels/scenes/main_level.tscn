@@ -23,215 +23,177 @@ safe_margin = 0.001
 metadata/_edit_lock_ = true
 
 [node name="Car" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(71, 589)
 metadata/_edit_lock_ = true
 
 [node name="Car2" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(147, 590)
 metadata/_edit_lock_ = true
 
 [node name="Car3" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(409, 590)
 metadata/_edit_lock_ = true
 
 [node name="Car4" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(528, 455)
 metadata/_edit_lock_ = true
 
 [node name="Car5" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(575, 561)
 metadata/_edit_lock_ = true
 
 [node name="Car6" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(946, 560)
 metadata/_edit_lock_ = true
 
 [node name="Car7" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(224, 495)
 metadata/_edit_lock_ = true
 
 [node name="Car8" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(782, 494)
 metadata/_edit_lock_ = true
 
 [node name="Car9" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(1106, 459)
 metadata/_edit_lock_ = true
 
 [node name="Car10" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(463, 455)
 metadata/_edit_lock_ = true
 
 [node name="Car11" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(1159, 46)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car12" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(946, 48)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car13" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(924, 77)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car14" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(1132, 148)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car15" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(703, 175)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car16" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(717, 51)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car17" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(569, 142)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car18" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(470, 75)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car19" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(95, 51)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car20" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(216, 143)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Car21" parent="." instance=ExtResource("3_64rjl")]
-visible = false
 position = Vector2(430, 171)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Taxi" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(75, 560)
 metadata/_edit_lock_ = true
 
 [node name="Taxi2" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(1126, 561)
 metadata/_edit_lock_ = true
 
 [node name="Taxi3" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(861, 585)
 metadata/_edit_lock_ = true
 
 [node name="Taxi4" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(680, 564)
 metadata/_edit_lock_ = true
 
 [node name="Taxi5" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(125, 463)
 metadata/_edit_lock_ = true
 
 [node name="Taxi6" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(1071, 76)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Taxi7" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(560, 47)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Taxi8" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(998, 159)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Taxi9" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(105, 174)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Taxi10" parent="." instance=ExtResource("4_2nd1w")]
-visible = false
 position = Vector2(230, 68)
 direction = -1
 metadata/_edit_lock_ = true
 
 [node name="Bus" parent="." instance=ExtResource("5_n0uq5")]
-visible = false
 position = Vector2(113, 254)
 collision_layer = 2
 sprite_choice = 2
 
 [node name="Bus2" parent="." instance=ExtResource("5_n0uq5")]
-visible = false
 position = Vector2(767, 237)
 collision_layer = 2
 
 [node name="Bus3" parent="." instance=ExtResource("5_n0uq5")]
-visible = false
 position = Vector2(658, 253)
 collision_layer = 2
 sprite_choice = 1
 
 [node name="Bus4" parent="." instance=ExtResource("5_n0uq5")]
-visible = false
 position = Vector2(1092, 377)
 collision_layer = 2
 direction = -1
 sprite_choice = 1
 
 [node name="Bus5" parent="." instance=ExtResource("5_n0uq5")]
-visible = false
 position = Vector2(109, 375)
 collision_layer = 2
 direction = -1
 sprite_choice = 1
 
 [node name="Bus6" parent="." instance=ExtResource("5_n0uq5")]
-visible = false
 position = Vector2(553, 377)
 collision_layer = 2
 direction = -1
 
 [node name="Bus7" parent="." instance=ExtResource("5_n0uq5")]
-visible = false
 position = Vector2(790, 378)
 collision_layer = 2
 direction = -1
