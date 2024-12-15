@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 #	Viewport size
 var viewport_size: Vector2
