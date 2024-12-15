@@ -11,7 +11,7 @@ background_mode = 3
 glow_enabled = true
 glow_bloom = 0.5
 
-[node name="Football" type="Area2D"]
+[node name="Football" type="Area2D" groups=["victory_item"]]
 collision_layer = 2
 script = ExtResource("1_j1fi3")
 
