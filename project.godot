@@ -15,10 +15,16 @@ run/main_scene="res://UI/scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://logics/scripts/GameManager.gd"
+DataManager="*res://logics/scripts/DataManager.gd"
+
 [global_group]
 
 bus_stops="Metrobus bus stops"
 victory_item="Items that give the user the win once the player gets them"
+stopwatch=""
 
 [input]
 

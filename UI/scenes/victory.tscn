@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://fy1m1r17j8a4"]
+[gd_scene load_steps=4 format=3 uid="uid://fy1m1r17j8a4"]
 
 [ext_resource type="Texture2D" uid="uid://dgcdqbcvo46em" path="res://UI/assets/victory.png" id="1_elm33"]
+[ext_resource type="Script" path="res://UI/scripts/victory.gd" id="1_loixl"]
 [ext_resource type="Script" path="res://UI/scripts/victory_menu.gd" id="2_0hclp"]
 
 [node name="Victory" type="Node2D"]
+script = ExtResource("1_loixl")
 
 [node name="Victory_TextureRect" type="TextureRect" parent="."]
 offset_left = -40.0
@@ -29,6 +31,12 @@ offset_bottom = 192.0
 layout_mode = 0
 offset_right = 231.0
 offset_bottom = 88.0
+
+[node name="TimeLabel" type="Label" parent="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer"]
+layout_mode = 2
+
+[node name="RecordLabel" type="Label" parent="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer"]
+layout_mode = 2
 
 [node name="Victory_PlayAgain" type="Button" parent="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer"]
 modulate = Color(0, 0, 0, 1)
