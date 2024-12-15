@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://tc2apjmqdadw"]
+
+[ext_resource type="Texture2D" uid="uid://b4m2efbf6hlq2" path="res://UI/assets/gameover.png" id="1_nep0g"]
+[ext_resource type="Script" path="res://UI/scripts/game_over_menu.gd" id="2_krs4r"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="GameOver_TextureRect" type="TextureRect" parent="."]
+offset_left = -40.0
+offset_top = -16.0
+offset_right = 1496.0
+offset_bottom = 848.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_nep0g")
+stretch_mode = 3
+
+[node name="GameOver_CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_krs4r")
+
+[node name="GameOver_Control" type="Control" parent="GameOver_CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 464.0
+offset_top = 288.0
+offset_right = 464.0
+offset_bottom = 288.0
+
+[node name="GameOver_VBoxContainer" type="VBoxContainer" parent="GameOver_CanvasLayer/GameOver_Control"]
+layout_mode = 0
+offset_right = 231.0
+offset_bottom = 88.0
+
+[node name="PlayAgain_Button" type="Button" parent="GameOver_CanvasLayer/GameOver_Control/GameOver_VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Volver a jugar"
+flat = true
+
+[node name="Exit_Button" type="Button" parent="GameOver_CanvasLayer/GameOver_Control/GameOver_VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Salir"
+flat = true
+
+[connection signal="pressed" from="GameOver_CanvasLayer/GameOver_Control/GameOver_VBoxContainer/PlayAgain_Button" to="GameOver_CanvasLayer" method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="GameOver_CanvasLayer/GameOver_Control/GameOver_VBoxContainer/Exit_Button" to="GameOver_CanvasLayer" method="_on_exit_button_pressed"]

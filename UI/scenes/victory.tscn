@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://fy1m1r17j8a4"]
+
+[ext_resource type="Texture2D" uid="uid://dgcdqbcvo46em" path="res://UI/assets/victory.png" id="1_elm33"]
+[ext_resource type="Script" path="res://UI/scripts/victory_menu.gd" id="2_0hclp"]
+
+[node name="Victory" type="Node2D"]
+
+[node name="Victory_TextureRect" type="TextureRect" parent="."]
+offset_left = -40.0
+offset_top = -16.0
+offset_right = 1496.0
+offset_bottom = 848.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_elm33")
+stretch_mode = 3
+
+[node name="Victory_CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_0hclp")
+
+[node name="Victory_Control" type="Control" parent="Victory_CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 464.0
+offset_top = 192.0
+offset_right = 464.0
+offset_bottom = 192.0
+
+[node name="Victory_VBoxContainer" type="VBoxContainer" parent="Victory_CanvasLayer/Victory_Control"]
+layout_mode = 0
+offset_right = 231.0
+offset_bottom = 88.0
+
+[node name="Victory_PlayAgain" type="Button" parent="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Volver a jugar"
+flat = true
+
+[node name="Victory_Exit" type="Button" parent="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Salir"
+flat = true
+
+[connection signal="pressed" from="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer/Victory_PlayAgain" to="Victory_CanvasLayer" method="_on_victory_play_again_pressed"]
+[connection signal="pressed" from="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer/Victory_Exit" to="Victory_CanvasLayer" method="_on_victory_exit_pressed"]
