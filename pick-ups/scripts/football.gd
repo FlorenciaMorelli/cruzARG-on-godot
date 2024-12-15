@@ -23,4 +23,4 @@ func get_random_position() -> Vector2:
 func _on_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
 		queue_free()
-		print("Messi tocó la pelota")
+		get_tree().change_scene_to_file("res://UI/scenes/victory.tscn")
