@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs6vwsqmjldc2"]
+
+[ext_resource type="Texture2D" uid="uid://bpa68iwqudgr1" path="res://pick-ups/sprites/football.png" id="1_2x7su"]
+[ext_resource type="Script" path="res://pick-ups/scripts/football.gd" id="1_j1fi3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sspv8"]
+radius = 8.0
+
+[sub_resource type="Environment" id="Environment_52qan"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.5
+
+[node name="Football" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_j1fi3")
+
+[node name="Football_CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sspv8")
+
+[node name="Football_Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1.5, 1.5, 1.5, 1)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_2x7su")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_52qan")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
