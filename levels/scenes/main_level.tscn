@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://chwowllv2b8uw"]
+[gd_scene load_steps=6 format=4 uid="uid://chwowllv2b8uw"]
 
 [ext_resource type="PackedScene" uid="uid://cydnkylxht4kn" path="res://player/scenes/messi.tscn" id="1_wu3pu"]
 [ext_resource type="TileSet" uid="uid://wuxjbn5o54o8" path="res://maps/9dejulio/9dejulio.tres" id="2_rxutt"]
 [ext_resource type="PackedScene" uid="uid://cael3dc4hl50w" path="res://vehicles/scenes/car.tscn" id="3_64rjl"]
 [ext_resource type="PackedScene" uid="uid://b3cl5b0l1qb8t" path="res://vehicles/scenes/taxi.tscn" id="4_2nd1w"]
+[ext_resource type="PackedScene" uid="uid://da6wkhr4rlo6j" path="res://vehicles/scenes/bus.tscn" id="5_n0uq5"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -114,35 +115,113 @@ metadata/_edit_lock_ = true
 
 [node name="Taxi" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(75, 560)
+metadata/_edit_lock_ = true
 
 [node name="Taxi2" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(1126, 561)
+metadata/_edit_lock_ = true
 
 [node name="Taxi3" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(861, 585)
+metadata/_edit_lock_ = true
 
 [node name="Taxi4" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(680, 564)
+metadata/_edit_lock_ = true
 
 [node name="Taxi5" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(125, 463)
+metadata/_edit_lock_ = true
 
 [node name="Taxi6" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(1071, 76)
 direction = -1
+metadata/_edit_lock_ = true
 
 [node name="Taxi7" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(560, 47)
 direction = -1
+metadata/_edit_lock_ = true
 
 [node name="Taxi8" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(998, 159)
 direction = -1
+metadata/_edit_lock_ = true
 
 [node name="Taxi9" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(105, 174)
 direction = -1
+metadata/_edit_lock_ = true
 
 [node name="Taxi10" parent="." instance=ExtResource("4_2nd1w")]
 position = Vector2(230, 68)
 direction = -1
+metadata/_edit_lock_ = true
+
+[node name="Bus" parent="." instance=ExtResource("5_n0uq5")]
+position = Vector2(113, 254)
+collision_layer = 2
+sprite_choice = 2
+
+[node name="Bus2" parent="." instance=ExtResource("5_n0uq5")]
+position = Vector2(767, 237)
+collision_layer = 2
+
+[node name="Bus3" parent="." instance=ExtResource("5_n0uq5")]
+position = Vector2(658, 253)
+collision_layer = 2
+sprite_choice = 1
+
+[node name="Bus4" parent="." instance=ExtResource("5_n0uq5")]
+position = Vector2(1092, 377)
+collision_layer = 2
+direction = -1
+sprite_choice = 1
+
+[node name="Bus5" parent="." instance=ExtResource("5_n0uq5")]
+position = Vector2(109, 375)
+collision_layer = 2
+direction = -1
+sprite_choice = 1
+
+[node name="Bus6" parent="." instance=ExtResource("5_n0uq5")]
+position = Vector2(553, 377)
+collision_layer = 2
+direction = -1
+
+[node name="Bus7" parent="." instance=ExtResource("5_n0uq5")]
+position = Vector2(790, 378)
+collision_layer = 2
+direction = -1
+
+[node name="BusStop1" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(129, 254)
+scale = Vector2(3, 3)
+
+[node name="BusStop2" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(502, 256)
+scale = Vector2(1, 4.56)
+
+[node name="BusStop3" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(658, 254)
+scale = Vector2(1, 3.24)
+
+[node name="BusStop4" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(1037, 252)
+scale = Vector2(1, 2.88)
+
+[node name="BusStop5" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(1012, 380)
+scale = Vector2(1, 2.96)
+
+[node name="BusStop6" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(652, 377)
+scale = Vector2(1, 2.8)
+
+[node name="BusStop7" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(505, 380)
+scale = Vector2(1, 2.96)
+
+[node name="BusStop8" type="Marker2D" parent="." groups=["bus_stops"]]
+position = Vector2(129, 374)
+scale = Vector2(1, 2.56)
