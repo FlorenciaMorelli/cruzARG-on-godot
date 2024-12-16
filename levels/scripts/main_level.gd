@@ -6,6 +6,9 @@ var item_scene = preload("res://pick-ups/scenes/mate.tscn")
 func _ready() -> void:
 	spawn_item()
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("exit") : 
+		get_tree().change_scene_to_file("res://UI/scenes/menu.tscn")
 
 func spawn_item():
 	var victory_item = item_scene.instantiate()
