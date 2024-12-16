@@ -12,8 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_play_again_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://levels/scenes/main_level.tscn")
-
+	get_tree().change_scene_to_file("res://UI/scenes/game.tscn")
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
