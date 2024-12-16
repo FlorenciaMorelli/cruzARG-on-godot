@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://tc2apjmqdadw"]
+[gd_scene load_steps=6 format=3 uid="uid://tc2apjmqdadw"]
 
 [ext_resource type="Script" path="res://UI/scripts/game_over.gd" id="1_foc6a"]
 [ext_resource type="Texture2D" uid="uid://b4m2efbf6hlq2" path="res://UI/sprites/gameover.png" id="1_nep0g"]
 [ext_resource type="Script" path="res://UI/scripts/game_over_menu.gd" id="2_krs4r"]
 [ext_resource type="AudioStream" uid="uid://bg0v5uw800t3n" path="res://UI/sounds/game_over.wav" id="4_ne64t"]
+[ext_resource type="FontFile" uid="uid://2v67ej3gxqwk" path="res://UI/fonts/font.ttf" id="4_omt6h"]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_foc6a")
@@ -36,6 +37,7 @@ offset_bottom = 88.0
 [node name="PlayAgain_Button" type="Button" parent="GameOver_CanvasLayer/GameOver_Control/GameOver_VBoxContainer"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_omt6h")
 theme_override_font_sizes/font_size = 24
 text = "Volver a jugar"
 flat = true
@@ -43,6 +45,7 @@ flat = true
 [node name="Exit_Button" type="Button" parent="GameOver_CanvasLayer/GameOver_Control/GameOver_VBoxContainer"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_omt6h")
 theme_override_font_sizes/font_size = 24
 text = "Salir"
 flat = true

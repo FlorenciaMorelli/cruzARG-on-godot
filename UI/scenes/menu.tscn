@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwxiiw5mh3kdi"]
+[gd_scene load_steps=5 format=3 uid="uid://cwxiiw5mh3kdi"]
 
 [ext_resource type="Texture2D" uid="uid://c2q8oqr50hj4b" path="res://UI/sprites/menu-background.png" id="1_evptl"]
 [ext_resource type="Script" path="res://UI/scripts/menu.gd" id="2_5rpcx"]
+[ext_resource type="FontFile" uid="uid://2v67ej3gxqwk" path="res://UI/fonts/font.ttf" id="3_bl5r0"]
 [ext_resource type="AudioStream" uid="uid://dsaur5sncgv48" path="res://UI/sounds/menu.mp3" id="3_rxqm0"]
 
 [node name="MainMenu" type="Node2D"]
@@ -33,6 +34,7 @@ offset_bottom = 66.0
 [node name="Play" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bl5r0")
 theme_override_font_sizes/font_size = 24
 text = "Jugar"
 flat = true
@@ -40,6 +42,7 @@ flat = true
 [node name="HowToPlay" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bl5r0")
 theme_override_font_sizes/font_size = 24
 text = "Cómo se juega"
 flat = true
@@ -47,6 +50,7 @@ flat = true
 [node name="Exit" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bl5r0")
 theme_override_font_sizes/font_size = 24
 text = "Salir"
 flat = true

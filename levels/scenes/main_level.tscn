@@ -297,13 +297,6 @@ position = Vector2(128, 208)
 [node name="NewJerseyBarrier22" parent="." instance=ExtResource("6_rkmu1")]
 position = Vector2(64, 208)
 
-[node name="StopwatchLabel" type="Label" parent="."]
-offset_left = 998.0
-offset_top = 613.0
-offset_right = 1088.0
-offset_bottom = 636.0
-text = "00 : 00 : 000"
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_8unmw")
 volume_db = 5.0
