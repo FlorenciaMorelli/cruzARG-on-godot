@@ -22,9 +22,9 @@ script = ExtResource("2_0hclp")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Victory_CanvasLayer"]
 offset_left = 370.0
-offset_top = 160.0
+offset_top = 163.0
 offset_right = 772.0
-offset_bottom = 200.0
+offset_bottom = 203.0
 theme_override_constants/separation = 50
 alignment = 1
 
