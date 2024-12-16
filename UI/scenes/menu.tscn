@@ -37,6 +37,13 @@ theme_override_font_sizes/font_size = 24
 text = "Jugar"
 flat = true
 
+[node name="HowToPlay" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Cómo se juega"
+flat = true
+
 [node name="Exit" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
@@ -51,4 +58,5 @@ autoplay = true
 parameters/looping = true
 
 [connection signal="pressed" from="CanvasLayer/Menu/VerticalContainer/Play" to="CanvasLayer" method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VerticalContainer/HowToPlay" to="CanvasLayer" method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/VerticalContainer/Exit" to="CanvasLayer" method="_on_exit_pressed"]
