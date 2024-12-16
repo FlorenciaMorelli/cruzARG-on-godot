@@ -19,21 +19,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("down"):
-		selected_index += move_speed
-		selected_index = clamp(selected_index, 0, len(menu_items) - 1)
-		update_selected_item()
-		
-	if Input.is_action_just_pressed("up"):
-		selected_index -= move_speed
-		selected_index = clamp(selected_index, 0, len(menu_items) - 1)
-		update_selected_item()
-	
-	if Input.is_action_just_pressed("select") : 
-		menu_items[selected_index].emit_signal("pressed")
-	
-	if Input.is_action_just_pressed("exit") : 
-		get_tree().quit()
+	_handle_keys()
 
 func update_selected_item():
 	# Deselect all menu items
@@ -53,3 +39,20 @@ func _on_exit_pressed() -> void:
 
 func _on_how_to_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/scenes/instructions.tscn")
+
+func _handle_keys() :
+	if Input.is_action_just_pressed("down"):
+		selected_index += move_speed
+		selected_index = clamp(selected_index, 0, len(menu_items) - 1)
+		update_selected_item()
+		
+	if Input.is_action_just_pressed("up"):
+		selected_index -= move_speed
+		selected_index = clamp(selected_index, 0, len(menu_items) - 1)
+		update_selected_item()
+	
+	if Input.is_action_just_pressed("select") : 
+		menu_items[selected_index].emit_signal("pressed")
+	
+	if Input.is_action_just_pressed("exit") : 
+		get_tree().quit()
