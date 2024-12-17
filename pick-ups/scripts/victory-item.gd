@@ -17,7 +17,8 @@ func _process(delta: float) -> void:
 func get_random_position() -> Vector2:
 	#	Define ranges
 	var random_x = randf_range(0, viewport_size.x)  #	Viewports full width
-	return Vector2(random_x, 16)
+	var random_y = randf_range(-16, 16)  #	Max height
+	return Vector2(random_x, random_y)
 
 
 func _on_body_entered(body: Node) -> void:
