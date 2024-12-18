@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxvet8n6bano4"]
+
+[ext_resource type="Texture2D" uid="uid://yekhhy578j27" path="res://pick-ups/sprites/mate.png" id="1_bmmo8"]
+[ext_resource type="Script" path="res://pick-ups/scripts/victory-item.gd" id="1_gw50q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apptb"]
+radius = 16.0
+
+[sub_resource type="Environment" id="Environment_52qan"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.5
+
+[node name="Mate" type="Area2D" groups=["victory_item"]]
+script = ExtResource("1_gw50q")
+
+[node name="Mate_CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_apptb")
+
+[node name="Mate_Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_bmmo8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_52qan")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

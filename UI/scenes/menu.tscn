@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwxiiw5mh3kdi"]
+
+[ext_resource type="Texture2D" uid="uid://c2q8oqr50hj4b" path="res://UI/sprites/menu-background.png" id="1_evptl"]
+[ext_resource type="Script" path="res://UI/scripts/menu.gd" id="2_5rpcx"]
+[ext_resource type="FontFile" uid="uid://2v67ej3gxqwk" path="res://UI/fonts/font.ttf" id="3_bl5r0"]
+[ext_resource type="AudioStream" uid="uid://dsaur5sncgv48" path="res://UI/sounds/menu.mp3" id="3_rxqm0"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -69.0
+offset_top = -39.0
+offset_right = 1331.0
+offset_bottom = 749.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_evptl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_5rpcx")
+
+[node name="Menu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 457.0
+offset_top = 231.0
+offset_right = 457.0
+offset_bottom = 231.0
+
+[node name="VerticalContainer" type="VBoxContainer" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_right = 231.0
+offset_bottom = 66.0
+
+[node name="Play" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bl5r0")
+theme_override_font_sizes/font_size = 24
+text = "Jugar"
+flat = true
+
+[node name="HowToPlay" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bl5r0")
+theme_override_font_sizes/font_size = 24
+text = "Cómo se juega"
+flat = true
+
+[node name="Exit" type="Button" parent="CanvasLayer/Menu/VerticalContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bl5r0")
+theme_override_font_sizes/font_size = 24
+text = "Salir"
+flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_rxqm0")
+volume_db = 5.0
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="CanvasLayer/Menu/VerticalContainer/Play" to="CanvasLayer" method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VerticalContainer/HowToPlay" to="CanvasLayer" method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VerticalContainer/Exit" to="CanvasLayer" method="_on_exit_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://fy1m1r17j8a4"]
+
+[ext_resource type="Texture2D" uid="uid://dgcdqbcvo46em" path="res://UI/sprites/victory.png" id="1_elm33"]
+[ext_resource type="Script" path="res://UI/scripts/victory.gd" id="1_loixl"]
+[ext_resource type="Script" path="res://UI/scripts/victory_menu.gd" id="2_0hclp"]
+[ext_resource type="FontFile" uid="uid://2v67ej3gxqwk" path="res://UI/fonts/font.ttf" id="4_mjoru"]
+[ext_resource type="AudioStream" uid="uid://cexphfhgf7fn6" path="res://UI/sounds/victory.wav" id="4_psx0u"]
+
+[node name="Victory" type="Node2D"]
+script = ExtResource("1_loixl")
+
+[node name="Victory_TextureRect" type="TextureRect" parent="."]
+offset_left = -35.0
+offset_top = -34.0
+offset_right = 1501.0
+offset_bottom = 830.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_elm33")
+stretch_mode = 3
+
+[node name="Victory_CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_0hclp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Victory_CanvasLayer"]
+offset_left = 335.0
+offset_top = 165.0
+offset_right = 807.0
+offset_bottom = 205.0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="TimeLabel" type="Label" parent="Victory_CanvasLayer/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mjoru")
+theme_override_font_sizes/font_size = 24
+text = "Tiempo: 00:00 s"
+horizontal_alignment = 1
+
+[node name="RecordLabel" type="Label" parent="Victory_CanvasLayer/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mjoru")
+theme_override_font_sizes/font_size = 24
+text = "Récord: 00:00 s"
+horizontal_alignment = 1
+
+[node name="Victory_Control" type="Control" parent="Victory_CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 441.0
+offset_top = 205.0
+offset_right = 441.0
+offset_bottom = 205.0
+
+[node name="Victory_VBoxContainer" type="VBoxContainer" parent="Victory_CanvasLayer/Victory_Control"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 16.0
+offset_right = 206.0
+offset_bottom = 68.0
+
+[node name="Victory_PlayAgain" type="Button" parent="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mjoru")
+theme_override_font_sizes/font_size = 18
+text = "Volver a jugar"
+flat = true
+
+[node name="Victory_Exit" type="Button" parent="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mjoru")
+theme_override_font_sizes/font_size = 18
+text = "Salir"
+flat = true
+
+[node name="Victory_AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_psx0u")
+
+[connection signal="pressed" from="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer/Victory_PlayAgain" to="Victory_CanvasLayer" method="_on_victory_play_again_pressed"]
+[connection signal="pressed" from="Victory_CanvasLayer/Victory_Control/Victory_VBoxContainer/Victory_Exit" to="Victory_CanvasLayer" method="_on_victory_exit_pressed"]
