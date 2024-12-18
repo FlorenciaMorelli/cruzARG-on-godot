@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3cl5b0l1qb8t"]
+
+[ext_resource type="Script" path="res://vehicles/scripts/taxi.gd" id="1_dmdk5"]
+[ext_resource type="Texture2D" uid="uid://de1168ik2ok7l" path="res://vehicles/sprites/taxi-right.png" id="1_osntt"]
+[ext_resource type="AudioStream" uid="uid://vprci3w4cgit" path="res://vehicles/sounds/taxiHorn.mp3" id="3_vjmus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxvfw"]
+size = Vector2(64, 24)
+
+[node name="Taxi" type="RigidBody2D"]
+collision_layer = 2
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_dmdk5")
+
+[node name="Taxi_CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_hxvfw")
+
+[node name="Taxi_Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_osntt")
+
+[node name="Taxi_VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-1.90735e-06, -2.38419e-07)
+scale = Vector2(3.2, 1.6)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vjmus")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="Taxi_VisibleOnScreenEnabler2D" to="." method="_on_screen_exited"]
